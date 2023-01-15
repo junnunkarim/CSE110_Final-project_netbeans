@@ -191,4 +191,36 @@ class Admin {
 
         courseManager.unassignFacultyFromCourse(courseCode, facultyName);
     }
+    
+    public void assignSectionToFaculty(){
+        String courseCode;
+        String facultyName;
+        int sectionNo;
+        
+        System.out.println("Input the information to assign Section to the Faculty");
+        System.out.print("Input the Course Code: ");
+        courseCode =  input.nextLine();
+        System.out.print("Input the Faculty name: ");
+        facultyName =  input.nextLine();
+        System.out.print("Input the Section no: ");
+        sectionNo = Integer.parseInt(input.nextLine());
+
+        courseManager.assignSectionToFaculty(courseCode, facultyName,sectionNo);
+    }
+    
+      public void unassignSectionFromFaculty(){
+        String courseCode;
+        String facultyName;
+        int sectionNo;
+        
+        System.out.println("Input the information to unassign Section from the Faculty");
+        System.out.print("Input the Course Code: ");
+        courseCode =  input.nextLine();
+        System.out.print("Input the Faculty name: ");
+        facultyName =  input.nextLine();
+        System.out.print("Input the Section no: ");
+        sectionNo = Integer.parseInt(input.nextLine());
+
+        courseManager.unassignSectionFromFaculty(courseCode, facultyName,sectionNo);
+    }
 }
