@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Admin {
-    static String password;
+public class Admin {
+    public static String password = "1234";
     Scanner input = new Scanner(System.in);
     private CourseManager courseManager = new CourseManager();
 

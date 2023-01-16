@@ -3,7 +3,7 @@ package Main;
 import java.util.ArrayList;
 import java.util.List;
 
-class Section {
+public class Section {
   private String time24;
   private String weekDate;
   private int room;

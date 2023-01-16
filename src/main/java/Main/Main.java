@@ -1,34 +1,29 @@
 package Main;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
+import swing.*;
 
-class Main
+public class Main
 {
-  static HashMap<String, Course> courseMap = new HashMap<>(); // <courseCode, Course object>
-  static HashMap<String, Faculty> facultyMap = new HashMap<>(); // <facultyName, Faculty object>
-  static HashMap<String, Student> studentMap = new HashMap<>(); // <studentID, Student object>
-
+  public static HashMap<String, Course> courseMap = new HashMap<>(); // <courseCode, Course object>
+  public static HashMap<String, Faculty> facultyMap = new HashMap<>(); // <facultyName, Faculty object>
+  public static HashMap<String, Student> studentMap = new HashMap<>(); // <studentID, Student object>
+  
+  public static String[] depList = {"CSE", "EEE", "ECE", "MAT", "PHY", "ENG"};
+  public static List<String> departmentList = new ArrayList<>(Arrays.asList(depList));
+  
   public static void main(String[] args)
   {
     Main main = new Main();
     Initialize initialize = new Initialize();
     initialize.loadDatabase();
 
-    //loginForm();
-
-    Admin admin = new Admin("1234");
-    CourseManager courseManager = new CourseManager();
-    Scanner input = new Scanner(System.in);
-
-    /*
-    admin.addCourse();
-    admin.addCourse();
-    for(Course course : courseManager.getAllCourses())
-    {
-      System.out.println(course.toString());
-    }
-    */
+    MainLoginPanel panel = new MainLoginPanel();
+    panel.setVisible(true);
   }
 
   public void run()

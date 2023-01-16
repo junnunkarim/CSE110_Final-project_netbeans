@@ -10,7 +10,7 @@ public class Initialize
 
   public void storeDatabase()
   {
-    String directory = "database/";
+    String directory = "database\\";
 
 
     File dir = new File(directory);
@@ -32,7 +32,7 @@ public class Initialize
       String courseCode = course.getKey();
       Course courseObj = course.getValue();
 
-      String courseDirectory = "database/courseInfo/" + courseCode + "/";
+      String courseDirectory = "database\\courseInfo\\" + courseCode + "\\";
       File courseDir = new File(courseDirectory);
 
       String fileName = courseCode + ".txt";
@@ -115,7 +115,7 @@ public class Initialize
       String facultyKey = faculty.getKey();
       Faculty facultyValue = faculty.getValue();
 
-      String facultyDirectory = "database/facultyInfo/";
+      String facultyDirectory = "database\\facultyInfo\\";
       File facultyDir = new File(facultyDirectory);
 
       String fileName = "faculty_" + i + ".txt";
@@ -162,7 +162,7 @@ public class Initialize
       String studentKey = student.getKey();
       Student studentValue = student.getValue();
 
-      String studentDirectory = "database/studentInfo/";
+      String studentDirectory = "database\\studentInfo\\";
       File studentDir = new File(studentDirectory);
 
       String fileName = studentValue.getId() + ".txt";
@@ -212,7 +212,7 @@ public class Initialize
 
   public void storeAdminPassword()
   {
-    String adminDirectory = "database/";
+    String adminDirectory = "database\\";
     File adminDir = new File(adminDirectory);
 
     String fileName = "adminPassword" + ".txt";
@@ -236,7 +236,7 @@ public class Initialize
 
   public void loadDatabase()
   {
-    String directory = "database/";
+    String directory = "database\\";
 
     File dir = new File(directory);
 
@@ -252,7 +252,7 @@ public class Initialize
 
   public void loadCourses()
   {
-    String courseDirectory = "database/courseInfo/";
+    String courseDirectory = "database\\courseInfo\\";
     File courseDir = new File(courseDirectory);
     HashMap<String, Course> courseMap = new HashMap<>();
 
@@ -262,7 +262,7 @@ public class Initialize
 
       for(File dir : directoryList)
       {
-        String courseCodeDirectory = dir.getName() + "/";
+        String courseCodeDirectory = dir.getName() + "\\";
         File courseCodeDir = new File(courseCodeDirectory);
 
         if (courseCodeDir.exists() && courseCodeDir.isDirectory())
@@ -390,7 +390,7 @@ public class Initialize
 
   public void loadFaculty()
   {
-    String facultyDirectory = "database/facultyInfo/";
+    String facultyDirectory = "database\\facultyInfo/";
     File facultyDir = new File(facultyDirectory);
     HashMap<String, Faculty> facultyMap = new HashMap<>();
 
@@ -452,7 +452,7 @@ public class Initialize
 
   public void loadStudents()
   {
-    String studentDirectory = "database/studentInfo/";
+    String studentDirectory = "database\\studentInfo\\";
     File studentDir = new File(studentDirectory);
     HashMap<String, Student> studentMap = new HashMap<>();
 
@@ -554,7 +554,7 @@ public class Initialize
 
   public void loadAdmin()
   {
-    String adminDirectory = "database/";
+    String adminDirectory = "database\\";
     File adminDir = new File(adminDirectory);
 
     File adminFile = new File(adminDirectory + "adminPassword.txt");

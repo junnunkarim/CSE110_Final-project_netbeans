@@ -3,7 +3,7 @@ package Main;
 import java.util.ArrayList;
 import java.util.List;
 
-class Course
+public class Course
 {
   //private String department;
   private String courseCode; // format: MAT104
@@ -102,20 +102,12 @@ class Course
     return null;
   }
 
-  @Override
-  public String toString()
-  {
-    return "Course{" +
-        "courseCode='" + courseCode + '\'' +
-        ", prerequisite='" + prerequisite + '\'' +
-        ", credit=" + credit +
-        ", sectionCount=" + sectionCount +
-        ", departmentList=" + departmentList +
-        ", facultyList=" + facultyList +
-        ", enrolledIdList=" + enrolledIdList +
-        ", sectionList=" + sectionList +
-        '}';
-  }
+    @Override
+    public String toString() {
+        return "Course{" + "courseCode=" + courseCode + ", prerequisite=" + prerequisite + ", credit=" + credit + ", sectionCount=" + sectionCount + '}';
+    }
+
+ 
 
   // getter and setter
   public String getCourseCode()

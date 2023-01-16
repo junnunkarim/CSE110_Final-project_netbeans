@@ -2,7 +2,7 @@ package Main;
 
 import java.util.*;
 
-class Student {
+public class Student {
   private String name;
   private String id;
   private String department;
